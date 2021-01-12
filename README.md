@@ -68,4 +68,15 @@ When Profile To Login, 데이터 유지(사진, 이름, 설명)
 When Login To Profile, 데이터 전달(사진, 이름, 설명) -> Delegate 패턴 사용
 ProfileImageView In LoginVC, UIImagePickerController 사용하여 사진 접근
 
+- - - -
+
+Commit : Implement TapGesture By Code (1/12 16:00)
+
+![WebView](https://user-images.githubusercontent.com/11826495/104279946-78c41c80-54ee-11eb-858c-02b431aa4a40.png)
+
+로그인 UserDefaults 사용해서 간단하게 회원가입 / 로그인 구현
+showToast 구현
+WebView 생성
+
+코드로 TapGesture 수행해본 후, 주석 처리
 
