@@ -18,6 +18,7 @@
 		C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631D525AC415D005B2733 /* TabBarViewController.swift */; };
 		C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DA25AC4313005B2733 /* ProfileViewController.swift */; };
 		C2E631E025AC4318005B2733 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DF25AC4318005B2733 /* LoginViewController.swift */; };
+		C2E631FC25AD6814005B2733 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631FB25AD6814005B2733 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C2E631D525AC415D005B2733 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C2E631DA25AC4313005B2733 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C2E631DF25AC4318005B2733 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2E631FB25AD6814005B2733 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		C2E6319B25AC3A85005B2733 /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
+				C2E631FA25AD6807005B2733 /* extension */,
 				C2E631CF25AC3AE5005B2733 /* VC */,
 				C2E6319C25AC3A85005B2733 /* AppDelegate.swift */,
 				C2E6319E25AC3A85005B2733 /* SceneDelegate.swift */,
@@ -143,6 +146,14 @@
 				C2E631DF25AC4318005B2733 /* LoginViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		C2E631FA25AD6807005B2733 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				C2E631FB25AD6814005B2733 /* UIView+.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 			files = (
 				C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */,
 				C2E6319D25AC3A85005B2733 /* AppDelegate.swift in Sources */,
+				C2E631FC25AD6814005B2733 /* UIView+.swift in Sources */,
 				C2E6319F25AC3A85005B2733 /* SceneDelegate.swift in Sources */,
 				C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */,
 				C2E631D125AC3AF8005B2733 /* InitialViewController.swift in Sources */,

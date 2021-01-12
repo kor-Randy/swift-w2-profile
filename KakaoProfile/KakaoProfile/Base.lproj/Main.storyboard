@@ -48,7 +48,6 @@
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <action selector="tappedEditButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMT-FU-o9I"/>
-                                    <segue destination="TlT-N9-pZF" kind="presentation" id="fxG-t5-Ll9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,6 +73,7 @@
                         <outlet property="editButton" destination="F9Z-QB-7eD" id="3PV-2c-dTt"/>
                         <outlet property="nameLabel" destination="Ekh-SX-Lhj" id="fIQ-cn-emZ"/>
                         <outlet property="profileImageView" destination="tnF-Rb-sfb" id="41P-pe-ttZ"/>
+                        <segue destination="TlT-N9-pZF" kind="presentation" identifier="ProfileToLogin" id="QtB-fF-Z3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
         <!--Item-->
         <scene sceneID="04u-hP-aD2">
             <objects>
-                <viewController id="TlT-N9-pZF" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="TlT-N9-pZF" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vta-Fl-9x9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,14 +132,23 @@
                                 <state key="normal" image="camera" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedCameraButton:" destination="TlT-N9-pZF" eventType="touchUpInside" id="dyd-2a-3QQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOg-E9-3Mj">
                                 <rect key="frame" x="10" y="30" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="tappedCancelButton:" destination="TlT-N9-pZF" eventType="touchUpInside" id="5S1-Zr-VY7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnX-t3-zQx">
                                 <rect key="frame" x="328" y="30" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="tappedDoneButton:" destination="TlT-N9-pZF" eventType="touchUpInside" id="g2A-mh-nkA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="프로필" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpf-vp-d4f">
                                 <rect key="frame" x="159" y="35" width="52" height="24"/>
