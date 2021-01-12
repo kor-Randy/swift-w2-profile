@@ -13,7 +13,7 @@ Embed TabBar
 Commit : Implement TableView (Programmatically, Storyboard), Implement ProfileVC (1/12 11:12)
 
 
-<table id = "commit_table2">
+<table id = "commit_table1">
    <tr style = "background-color:#00000000; border-style:none;">
      <td style = "align:center; border-style:none;">
        <img src="https://user-images.githubusercontent.com/11826495/104260333-a5643e00-54c6-11eb-9c6a-87072494fb45.png" style = "border:1px solid #eeeeee"/>
@@ -28,3 +28,21 @@ Commit : Implement TableView (Programmatically, Storyboard), Implement ProfileVC
 
 ProfileVC UIComponent 오토레이아웃 작성
 Edit 버튼 동작 
+
+- - - -
+Commit : Implement Modal, Init LoginVC (1/12 11:41)
+
+<table id = "commit_table2">
+   <tr style = "background-color:#00000000; border-style:none;">
+     <td style = "align:center; border-style:none;">
+       <img src="https://user-images.githubusercontent.com/11826495/104262413-e52d2480-54ca-11eb-9877-b4c6c4ef5767.png" style = "border:1px solid #eeeeee"/>
+     </td>
+     <td style = "align:center; border-style:none;">
+       <img src="https://user-images.githubusercontent.com/11826495/104262543-2c1b1a00-54cb-11eb-9a70-7f1167c5196d.png" style = "border:1px solid #eeeeee"/>
+     </td>
+  </tr>
+</table>
+
+
+
+
