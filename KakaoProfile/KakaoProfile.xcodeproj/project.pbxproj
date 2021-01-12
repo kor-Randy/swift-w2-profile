@@ -14,7 +14,6 @@
 		C2E631A925AC3A86005B2733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E631A725AC3A86005B2733 /* LaunchScreen.storyboard */; };
 		C2E631B425AC3A86005B2733 /* KakaoProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631B325AC3A86005B2733 /* KakaoProfileTests.swift */; };
 		C2E631BF25AC3A86005B2733 /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631BE25AC3A86005B2733 /* KakaoProfileUITests.swift */; };
-		C2E631D125AC3AF8005B2733 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631D025AC3AF8005B2733 /* InitialViewController.swift */; };
 		C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631D525AC415D005B2733 /* TabBarViewController.swift */; };
 		C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DA25AC4313005B2733 /* ProfileViewController.swift */; };
 		C2E631E025AC4318005B2733 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DF25AC4318005B2733 /* LoginViewController.swift */; };
@@ -52,7 +51,6 @@
 		C2E631BA25AC3A86005B2733 /* KakaoProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E631BE25AC3A86005B2733 /* KakaoProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileUITests.swift; sourceTree = "<group>"; };
 		C2E631C025AC3A86005B2733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2E631D025AC3AF8005B2733 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		C2E631D525AC415D005B2733 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C2E631DA25AC4313005B2733 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C2E631DF25AC4318005B2733 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 		C2E631CF25AC3AE5005B2733 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				C2E631D025AC3AF8005B2733 /* InitialViewController.swift */,
 				C2E631D525AC415D005B2733 /* TabBarViewController.swift */,
 				C2E631DA25AC4313005B2733 /* ProfileViewController.swift */,
 				C2E631DF25AC4318005B2733 /* LoginViewController.swift */,
@@ -291,7 +288,6 @@
 				C2E631FC25AD6814005B2733 /* UIView+.swift in Sources */,
 				C2E6319F25AC3A85005B2733 /* SceneDelegate.swift in Sources */,
 				C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */,
-				C2E631D125AC3AF8005B2733 /* InitialViewController.swift in Sources */,
 				C2E631E025AC4318005B2733 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

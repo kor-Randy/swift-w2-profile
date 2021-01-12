@@ -6,6 +6,7 @@ class LoginViewController: UIViewController {
 
     var nameText: String?
     var descriptionText: String?
+    var profileImage: UIImage?
     weak var delegate: ProfileDelegate?
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -29,6 +30,7 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         self.nameTextField.text = nameText
         self.descriptionTextField.text = descriptionText
+        self.profileImageView.image = profileImage
     }
     private func initImageView(){
         self.profileImageView.contentMode = .scaleAspectFill

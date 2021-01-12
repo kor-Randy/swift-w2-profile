@@ -48,6 +48,7 @@ class ProfileViewController: UIViewController {
             loginVC.delegate = self
             loginVC.nameText = self.nameLabel.text
             loginVC.descriptionText = self.descriptionLabel.text
+            loginVC.profileImage = self.profileImageView.image
             present(loginVC, animated: true, completion: nil)
         }
     }
