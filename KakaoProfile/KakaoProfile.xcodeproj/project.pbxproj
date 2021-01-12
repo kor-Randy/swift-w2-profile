@@ -16,8 +16,13 @@
 		C2E631BF25AC3A86005B2733 /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631BE25AC3A86005B2733 /* KakaoProfileUITests.swift */; };
 		C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631D525AC415D005B2733 /* TabBarViewController.swift */; };
 		C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DA25AC4313005B2733 /* ProfileViewController.swift */; };
-		C2E631E025AC4318005B2733 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DF25AC4318005B2733 /* LoginViewController.swift */; };
+		C2E631E025AC4318005B2733 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DF25AC4318005B2733 /* EditViewController.swift */; };
 		C2E631FC25AD6814005B2733 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631FB25AD6814005B2733 /* UIView+.swift */; };
+		C2E6320A25AD6F13005B2733 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6320925AD6F13005B2733 /* LoginViewController.swift */; };
+		C2E6320F25AD7078005B2733 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E6320E25AD7078005B2733 /* Colors.xcassets */; };
+		C2E6321525AD7227005B2733 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6321425AD7227005B2733 /* UserDefault.swift */; };
+		C2E6321A25AD74AB005B2733 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6321925AD74AB005B2733 /* UIViewController+.swift */; };
+		C2E6321F25AD7657005B2733 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6321E25AD7657005B2733 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +58,13 @@
 		C2E631C025AC3A86005B2733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E631D525AC415D005B2733 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C2E631DA25AC4313005B2733 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C2E631DF25AC4318005B2733 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2E631DF25AC4318005B2733 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		C2E631FB25AD6814005B2733 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		C2E6320925AD6F13005B2733 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2E6320E25AD7078005B2733 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C2E6321425AD7227005B2733 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		C2E6321925AD74AB005B2733 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		C2E6321E25AD7657005B2733 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,7 @@
 		C2E6319B25AC3A85005B2733 /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
+				C2E6321325AD7216005B2733 /* Data */,
 				C2E631FA25AD6807005B2733 /* extension */,
 				C2E631CF25AC3AE5005B2733 /* VC */,
 				C2E6319C25AC3A85005B2733 /* AppDelegate.swift */,
@@ -113,6 +124,7 @@
 				C2E631A525AC3A86005B2733 /* Assets.xcassets */,
 				C2E631A725AC3A86005B2733 /* LaunchScreen.storyboard */,
 				C2E631AA25AC3A86005B2733 /* Info.plist */,
+				C2E6320E25AD7078005B2733 /* Colors.xcassets */,
 			);
 			path = KakaoProfile;
 			sourceTree = "<group>";
@@ -140,7 +152,9 @@
 			children = (
 				C2E631D525AC415D005B2733 /* TabBarViewController.swift */,
 				C2E631DA25AC4313005B2733 /* ProfileViewController.swift */,
-				C2E631DF25AC4318005B2733 /* LoginViewController.swift */,
+				C2E631DF25AC4318005B2733 /* EditViewController.swift */,
+				C2E6320925AD6F13005B2733 /* LoginViewController.swift */,
+				C2E6321E25AD7657005B2733 /* MainViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -149,8 +163,17 @@
 			isa = PBXGroup;
 			children = (
 				C2E631FB25AD6814005B2733 /* UIView+.swift */,
+				C2E6321925AD74AB005B2733 /* UIViewController+.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		C2E6321325AD7216005B2733 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C2E6321425AD7227005B2733 /* UserDefault.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E631A925AC3A86005B2733 /* LaunchScreen.storyboard in Resources */,
+				C2E6320F25AD7078005B2733 /* Colors.xcassets in Resources */,
 				C2E631A625AC3A86005B2733 /* Assets.xcassets in Resources */,
 				C2E631A425AC3A85005B2733 /* Main.storyboard in Resources */,
 			);
@@ -283,12 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E6321525AD7227005B2733 /* UserDefault.swift in Sources */,
+				C2E6320A25AD6F13005B2733 /* LoginViewController.swift in Sources */,
 				C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */,
 				C2E6319D25AC3A85005B2733 /* AppDelegate.swift in Sources */,
 				C2E631FC25AD6814005B2733 /* UIView+.swift in Sources */,
+				C2E6321A25AD74AB005B2733 /* UIViewController+.swift in Sources */,
 				C2E6319F25AC3A85005B2733 /* SceneDelegate.swift in Sources */,
 				C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */,
-				C2E631E025AC4318005B2733 /* LoginViewController.swift in Sources */,
+				C2E631E025AC4318005B2733 /* EditViewController.swift in Sources */,
+				C2E6321F25AD7657005B2733 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

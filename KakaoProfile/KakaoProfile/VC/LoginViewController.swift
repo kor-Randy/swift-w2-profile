@@ -1,70 +1,46 @@
+//
+//  LoginViewController.swift
+//  KakaoProfile
+//
+//  Created by 지현우 on 2021/01/12.
+//
 
 import UIKit
-import Foundation
 
 class LoginViewController: UIViewController {
 
-    var nameText: String?
-    var descriptionText: String?
-    var profileImage: UIImage?
-    weak var delegate: ProfileDelegate?
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
-    
-    lazy var imagePicker : UIImagePickerController = {
-        let picker: UIImagePickerController = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.delegate = self
-        return picker
-    }()
+    private let userDefault = UserDefault.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initImageView()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.nameTextField.text = nameText
-        self.descriptionTextField.text = descriptionText
-        self.profileImageView.image = profileImage
-    }
-    private func initImageView(){
-        self.profileImageView.contentMode = .scaleAspectFill
-        self.profileImageView.roundView(by: 10)
-        self.profileImageView.setBorder(thick: 0.5, color: UIColor.black.cgColor)
-    }
     
-    @IBAction func tappedCameraButton(_ sender: Any) {
-        self.present(imagePicker, animated: true, completion: nil)
-    }
-    
-    @IBAction func tappedCancelButton(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true)
-    }
-    
-    @IBAction func tappedDoneButton(_ sender: Any) {
-       
-        delegate?.editProfile(image: self.profileImageView.image, name: self.nameTextField.text ?? "이름", description: self.descriptionTextField.text ?? "설명")
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-    
-}
-
-extension LoginViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    //취소 시
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    //이미지 선택 시
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            self.profileImageView.image = image
+    @IBAction func tappedLoginButton(_ sender: Any) {
+        
+        guard let id = self.idTextField.text, let pw = self.pwTextField.text else {
+            return
         }
-        self.dismiss(animated: true, completion: nil)
+        
+        if id == "" || pw == ""{
+            self.showToast(vc: self, msg: "아이디와 비밀번호를 입력해주세요.", sec: 1.0)
+        }else{
+            if let account = userDefault.getAccount(){
+                if id == account.0 && pw == account.1{
+                    self.showToast(vc: self, msg: "로그인 되었습니다.", sec: 1.0)
+                }else{
+                    self.showToast(vc: self, msg: "아이디와 비밀번호를 확인해주세요.", sec: 1.0)
+                }
+            }else{
+                userDefault.createAccount(id: id, pw: pw)
+                self.showToast(vc: self, msg: "기입한 정보로 회원가입되었습니다. 다시 로그인해주세요.", sec: 1.0)
+            }
+        }
     }
+    
 }

@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -73,7 +74,7 @@
                         <outlet property="editButton" destination="F9Z-QB-7eD" id="3PV-2c-dTt"/>
                         <outlet property="nameLabel" destination="Ekh-SX-Lhj" id="fIQ-cn-emZ"/>
                         <outlet property="profileImageView" destination="tnF-Rb-sfb" id="41P-pe-ttZ"/>
-                        <segue destination="TlT-N9-pZF" kind="presentation" identifier="ProfileToLogin" id="QtB-fF-Z3d"/>
+                        <segue destination="TlT-N9-pZF" kind="presentation" identifier="ProfileToEdit" id="QtB-fF-Z3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,6 +87,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tNA-Mk-k6F" customClass="TabBarViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zz6-mz-DMM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -94,10 +96,114 @@
             </objects>
             <point key="canvasLocation" x="9" y="458"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="yN8-i4-sES">
+            <objects>
+                <viewController id="qKR-0O-ejR" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6M9-UN-d4F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakao_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Psh-Pv-PvV">
+                                <rect key="frame" x="75" y="74" width="225" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="lj9-Mz-zdJ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="BmV-hs-QrV">
+                                <rect key="frame" x="20" y="264" width="335" height="119"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQE-Qi-RcO">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Fo8-6N-Gfh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4B-eE-DWm">
+                                        <rect key="frame" x="0.0" y="74" width="335" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="gaP-Pr-bm3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5t-sw-EA6">
+                                <rect key="frame" x="152.5" y="413" width="70" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="C2w-5L-pIQ"/>
+                                    <constraint firstAttribute="height" constant="35" id="kBP-Bq-CRG"/>
+                                </constraints>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedLoginButton:" destination="qKR-0O-ejR" eventType="touchUpInside" id="XuS-Mx-p0r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eid-L5-amA"/>
+                        <color key="backgroundColor" name="KakaoYellow"/>
+                        <constraints>
+                            <constraint firstItem="F5t-sw-EA6" firstAttribute="top" secondItem="BmV-hs-QrV" secondAttribute="bottom" constant="30" id="5IM-vF-uwg"/>
+                            <constraint firstItem="BmV-hs-QrV" firstAttribute="leading" secondItem="eid-L5-amA" secondAttribute="leading" constant="20" id="OiT-6W-L0r"/>
+                            <constraint firstItem="Psh-Pv-PvV" firstAttribute="top" secondItem="eid-L5-amA" secondAttribute="top" constant="30" id="PIb-EH-1XA"/>
+                            <constraint firstItem="eid-L5-amA" firstAttribute="trailing" secondItem="BmV-hs-QrV" secondAttribute="trailing" constant="20" id="jvd-TE-8Aq"/>
+                            <constraint firstItem="BmV-hs-QrV" firstAttribute="top" secondItem="Psh-Pv-PvV" secondAttribute="bottom" constant="40" id="uji-n6-hhk"/>
+                            <constraint firstItem="Psh-Pv-PvV" firstAttribute="centerX" secondItem="eid-L5-amA" secondAttribute="centerX" id="w2e-1s-oba"/>
+                            <constraint firstItem="F5t-sw-EA6" firstAttribute="centerX" secondItem="eid-L5-amA" secondAttribute="centerX" id="xDU-2E-q4Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9yh-2d-iGJ"/>
+                    <connections>
+                        <outlet property="idTextField" destination="PQE-Qi-RcO" id="m2i-tg-nIM"/>
+                        <outlet property="loginButton" destination="F5t-sw-EA6" id="Xlj-iQ-3eP"/>
+                        <outlet property="pwTextField" destination="c4B-eE-DWm" id="yvm-2I-z5S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbO-QF-0qH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045.5999999999999" y="871.21439280359823"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tio-vX-6pM">
+            <objects>
+                <viewController id="4Od-kc-MZj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0cB-Nn-S92">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOS-jI-Gym">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UNh-7t-ldd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UNh-7t-ldd" firstAttribute="trailing" secondItem="gOS-jI-Gym" secondAttribute="trailing" id="A5V-7B-Yps"/>
+                            <constraint firstItem="gOS-jI-Gym" firstAttribute="top" secondItem="UNh-7t-ldd" secondAttribute="top" id="ZN4-xD-ihZ"/>
+                            <constraint firstItem="UNh-7t-ldd" firstAttribute="bottom" secondItem="gOS-jI-Gym" secondAttribute="bottom" id="h87-ZD-J6F"/>
+                            <constraint firstItem="gOS-jI-Gym" firstAttribute="leading" secondItem="UNh-7t-ldd" secondAttribute="leading" id="sSj-0n-LaR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azt-8X-NkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2855" y="871"/>
+        </scene>
         <!--Item-->
         <scene sceneID="04u-hP-aD2">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="TlT-N9-pZF" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditVC" id="TlT-N9-pZF" customClass="EditViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vta-Fl-9x9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,11 +290,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHa-0v-NnI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118" y="862"/>
+            <point key="canvasLocation" x="2058" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ftN-8R-hsX">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavigation" automaticallyAdjustsScrollViewInsets="NO" id="oY3-lP-4Nz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YFr-me-Kqs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qKR-0O-ejR" kind="relationship" relationship="rootViewController" id="aXS-mS-Pys"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8C-ws-XGi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106.4000000000001" y="871.21439280359823"/>
         </scene>
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="kakao_logo" width="225" height="225"/>
+        <namedColor name="KakaoYellow">
+            <color red="1" green="0.90980392156862744" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

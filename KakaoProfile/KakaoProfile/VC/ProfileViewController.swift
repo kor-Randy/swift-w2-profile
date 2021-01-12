@@ -44,7 +44,7 @@ class ProfileViewController: UIViewController {
 //        performSegue(withIdentifier: "ProfileToLogin", sender: nil)
         
         //방법3
-        if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController{
+        if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "EditVC") as? EditViewController{
             loginVC.delegate = self
             loginVC.nameText = self.nameLabel.text
             loginVC.descriptionText = self.descriptionLabel.text
