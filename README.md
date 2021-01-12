@@ -43,6 +43,29 @@ Commit : Implement Modal, Init LoginVC (1/12 11:41)
   </tr>
 </table>
 
+- - - -
 
+Commit : Implement EditProfile, Use Delegate, Implement UIImagePickerController
+
+<table id = "commit_table3">
+   <tr style = "background-color:#00000000; border-style:none;">
+     <td style = "align:center; border-style:none;">
+       <img src="https://user-images.githubusercontent.com/11826495/104273939-187bad80-54e3-11eb-99db-28fa875b8728.png" style = "border:1px solid #eeeeee"/>
+     </td>
+     <td style = "align:center; border-style:none;">
+       <img src="https://user-images.githubusercontent.com/11826495/104273996-3812d600-54e3-11eb-8e75-54f1b8b8a3d5.png" style = "border:1px solid #eeeeee"/>
+     </td>
+      <td style = "align:center; border-style:none;">
+       <img src="https://user-images.githubusercontent.com/11826495/104274041-4c56d300-54e3-11eb-913e-a6b9f99196ae.png" style = "border:1px solid #eeeeee"/>
+     </td>
+      <td style = "align:center; border-style:none;">
+       <img src="https://user-images.githubusercontent.com/11826495/104274246-bec7b300-54e3-11eb-9018-c64cf5e143e9.png" style = "border:1px solid #eeeeee"/>
+     </td>
+  </tr>
+</table>
+
+When Profile To Login, 데이터 유지(사진, 이름, 설명)
+When Login To Profile, 데이터 전달(사진, 이름, 설명) -> Delegate 패턴 사용
+ProfileImageView In LoginVC, UIImagePickerController 사용하여 사진 접근
 
 
