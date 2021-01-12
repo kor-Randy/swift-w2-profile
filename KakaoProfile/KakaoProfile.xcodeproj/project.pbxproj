@@ -17,7 +17,7 @@
 		C2E631D125AC3AF8005B2733 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631D025AC3AF8005B2733 /* InitialViewController.swift */; };
 		C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631D525AC415D005B2733 /* TabBarViewController.swift */; };
 		C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DA25AC4313005B2733 /* ProfileViewController.swift */; };
-		C2E631E025AC4318005B2733 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DF25AC4318005B2733 /* VC2.swift */; };
+		C2E631E025AC4318005B2733 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DF25AC4318005B2733 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		C2E631D025AC3AF8005B2733 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		C2E631D525AC415D005B2733 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C2E631DA25AC4313005B2733 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C2E631DF25AC4318005B2733 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
+		C2E631DF25AC4318005B2733 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,7 @@
 				C2E631D025AC3AF8005B2733 /* InitialViewController.swift */,
 				C2E631D525AC415D005B2733 /* TabBarViewController.swift */,
 				C2E631DA25AC4313005B2733 /* ProfileViewController.swift */,
-				C2E631DF25AC4318005B2733 /* VC2.swift */,
+				C2E631DF25AC4318005B2733 /* LoginViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 				C2E6319F25AC3A85005B2733 /* SceneDelegate.swift in Sources */,
 				C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */,
 				C2E631D125AC3AF8005B2733 /* InitialViewController.swift in Sources */,
-				C2E631E025AC4318005B2733 /* VC2.swift in Sources */,
+				C2E631E025AC4318005B2733 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
