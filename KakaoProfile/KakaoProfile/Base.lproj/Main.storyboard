@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tNA-Mk-k6F">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,14 +11,69 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="VC1" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="BYZ-38-t0r" customClass="ProfileViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지현우" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekh-SX-Lhj">
+                                <rect key="frame" x="165" y="450" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8j-Jj-kR2">
+                                <rect key="frame" x="91.5" y="486" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tnF-Rb-sfb">
+                                <rect key="frame" x="117.5" y="300" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tnF-Rb-sfb" secondAttribute="height" multiplier="1:1" id="b6r-ao-1Ci"/>
+                                    <constraint firstAttribute="width" constant="140" id="wqF-ZZ-XpY"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Li-xg-0rQ">
+                                <rect key="frame" x="0.0" y="536" width="375" height="2"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="AFE-Eq-Lkl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9Z-QB-7eD">
+                                <rect key="frame" x="169.5" y="553" width="36" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="tappedEditButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMT-FU-o9I"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tnF-Rb-sfb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="420-96-287"/>
+                            <constraint firstItem="tnF-Rb-sfb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Byk-cU-0yr"/>
+                            <constraint firstItem="3Li-xg-0rQ" firstAttribute="top" secondItem="S8j-Jj-kR2" secondAttribute="bottom" constant="29" id="GD8-yE-sir"/>
+                            <constraint firstItem="Ekh-SX-Lhj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IEr-2h-5Tk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Li-xg-0rQ" secondAttribute="trailing" id="Jf9-dO-W3g"/>
+                            <constraint firstItem="3Li-xg-0rQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LfO-8k-zje"/>
+                            <constraint firstItem="S8j-Jj-kR2" firstAttribute="top" secondItem="Ekh-SX-Lhj" secondAttribute="bottom" constant="15" id="UXe-1E-K8y"/>
+                            <constraint firstItem="S8j-Jj-kR2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XbN-Ne-7QN"/>
+                            <constraint firstItem="Ekh-SX-Lhj" firstAttribute="top" secondItem="tnF-Rb-sfb" secondAttribute="bottom" constant="10" id="bvg-0A-TX2"/>
+                            <constraint firstItem="F9Z-QB-7eD" firstAttribute="top" secondItem="3Li-xg-0rQ" secondAttribute="bottom" constant="15" id="lOs-wI-hYQ"/>
+                            <constraint firstItem="F9Z-QB-7eD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lWw-K9-qW2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3xc-2h-Vn4"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="S8j-Jj-kR2" id="xao-bL-aBC"/>
+                        <outlet property="editButton" destination="F9Z-QB-7eD" id="3PV-2c-dTt"/>
+                        <outlet property="nameLabel" destination="Ekh-SX-Lhj" id="fIQ-cn-emZ"/>
+                        <outlet property="profileImageView" destination="tnF-Rb-sfb" id="41P-pe-ttZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,7 +98,7 @@
             <objects>
                 <viewController id="TlT-N9-pZF" customClass="VC2" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vta-Fl-9x9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="4gP-K0-b8F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

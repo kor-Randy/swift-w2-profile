@@ -16,7 +16,7 @@
 		C2E631BF25AC3A86005B2733 /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631BE25AC3A86005B2733 /* KakaoProfileUITests.swift */; };
 		C2E631D125AC3AF8005B2733 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631D025AC3AF8005B2733 /* InitialViewController.swift */; };
 		C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631D525AC415D005B2733 /* TabBarViewController.swift */; };
-		C2E631DB25AC4313005B2733 /* VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DA25AC4313005B2733 /* VC1.swift */; };
+		C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DA25AC4313005B2733 /* ProfileViewController.swift */; };
 		C2E631E025AC4318005B2733 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E631DF25AC4318005B2733 /* VC2.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		C2E631C025AC3A86005B2733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E631D025AC3AF8005B2733 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		C2E631D525AC415D005B2733 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		C2E631DA25AC4313005B2733 /* VC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC1.swift; sourceTree = "<group>"; };
+		C2E631DA25AC4313005B2733 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C2E631DF25AC4318005B2733 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +139,7 @@
 			children = (
 				C2E631D025AC3AF8005B2733 /* InitialViewController.swift */,
 				C2E631D525AC415D005B2733 /* TabBarViewController.swift */,
-				C2E631DA25AC4313005B2733 /* VC1.swift */,
+				C2E631DA25AC4313005B2733 /* ProfileViewController.swift */,
 				C2E631DF25AC4318005B2733 /* VC2.swift */,
 			);
 			path = VC;
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E631DB25AC4313005B2733 /* VC1.swift in Sources */,
+				C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */,
 				C2E6319D25AC3A85005B2733 /* AppDelegate.swift in Sources */,
 				C2E6319F25AC3A85005B2733 /* SceneDelegate.swift in Sources */,
 				C2E631D625AC415D005B2733 /* TabBarViewController.swift in Sources */,

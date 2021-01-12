@@ -8,32 +8,20 @@
 import Foundation
 import UIKit
 
-class TabBarViewController: UITabBarController, UITabBarControllerDelegate{
+class TabBarViewController: UITabBarController{
     
-    let vc1 = VC1()
-    let vc2 = VC2()
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC") else { return }
+        let vc2 = VC2()
         
-        delegate = self
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
-        let icon1 = UITabBarItem(title: "VC1", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle"))
+        let icon1 = UITabBarItem(title: "프로필", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle"))
         let icon2 = UITabBarItem(title: "VC2", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle"))
         
-        vc1.tabBarItem = icon1
+        profileVC.tabBarItem = icon1
         vc2.tabBarItem = icon2
-        let vcArr = [vc1, vc2]
+        let vcArr = [profileVC, vc2]
         self.setViewControllers(vcArr, animated: true)
     }
-    
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("\(tabBarController.selectedIndex)")
-    }
-    
+        
 }
