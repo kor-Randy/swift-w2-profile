@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="2045.5999999999999" y="871.21439280359823"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Tio-vX-6pM">
             <objects>
-                <viewController id="4Od-kc-MZj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="4Od-kc-MZj" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0cB-Nn-S92">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,6 +195,9 @@
                             <constraint firstItem="gOS-jI-Gym" firstAttribute="leading" secondItem="UNh-7t-ldd" secondAttribute="leading" id="sSj-0n-LaR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="gOS-jI-Gym" id="9Be-v7-xuK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azt-8X-NkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

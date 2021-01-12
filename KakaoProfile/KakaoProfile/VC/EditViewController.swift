@@ -25,7 +25,7 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
         initImageView()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.nameTextField.text = nameText

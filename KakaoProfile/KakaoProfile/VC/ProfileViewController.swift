@@ -19,9 +19,10 @@ class ProfileViewController: UIViewController {
         initImageView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
+//    private func addEvent(){
+//        let editButtonTap = UITapGestureRecognizer(target: self, action: #selector(self.tappedEditButton_Code))
+//        self.editButton.addGestureRecognizer(editButtonTap)
+//    }
     
     private func setProfile(){
         self.nameLabel.text = "지현우"
@@ -33,6 +34,21 @@ class ProfileViewController: UIViewController {
         self.profileImageView.roundView(by: 10)
         self.profileImageView.setBorder(thick: 0.5, color: UIColor.black.cgColor)
     }
+    
+//    @objc private func tappedEditButton_Code(){
+//        self.nameLabel.textColor = .blue
+//        self.nameLabel.backgroundColor = .yellow
+//        self.nameLabel.alpha = 0.5
+//        self.descriptionLabel.text = "크루미션"
+//
+//        if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "EditVC") as? EditViewController{
+//            loginVC.delegate = self
+//            loginVC.nameText = self.nameLabel.text
+//            loginVC.descriptionText = self.descriptionLabel.text
+//            loginVC.profileImage = self.profileImageView.image
+//            present(loginVC, animated: true, completion: nil)
+//        }
+//    }
     
     @IBAction func tappedEditButton(_ sender: Any) {
         self.nameLabel.textColor = .blue
@@ -69,7 +85,6 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: ProfileDelegate{
     func editProfile(image: UIImage?, name: String, description: String) {
-        print("name:\(name) , des: \(description)")
         self.profileImageView.image = image
         self.nameLabel.text = name
         self.descriptionLabel.text = description
