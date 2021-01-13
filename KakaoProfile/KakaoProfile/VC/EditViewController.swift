@@ -1,21 +1,20 @@
 
-import UIKit
 import Foundation
+import UIKit
 
 class EditViewController: UIViewController {
-
     var nameText: String?
     var descriptionText: String?
     var profileImage: UIImage?
     weak var delegate: ProfileDelegate?
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var cameraButton: UIButton!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var descriptionTextField: UITextField!
     
-    lazy var imagePicker : UIImagePickerController = {
-        let picker: UIImagePickerController = UIImagePickerController()
+    lazy var imagePicker: UIImagePickerController = {
+        let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.delegate = self
         return picker
@@ -23,51 +22,50 @@ class EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initImageView()
-        initProfileView()
+        self.initImageView()
+        self.initProfileView()
     }
 
-    private func initProfileView(){
-        self.nameTextField.text = nameText
-        self.descriptionTextField.text = descriptionText
-        self.profileImageView.image = profileImage
+    private func initProfileView() {
+        self.nameTextField.text = self.nameText
+        self.descriptionTextField.text = self.descriptionText
+        self.profileImageView.image = self.profileImage
     }
     
-    private func initImageView(){
+    private func initImageView() {
         self.profileImageView.contentMode = .scaleAspectFill
         self.profileImageView.roundView(by: 10)
         self.profileImageView.setBorder(thick: 0.5, color: UIColor.black.cgColor)
     }
     
     @IBAction func tappedCameraButton(_ sender: Any) {
-        self.present(imagePicker, animated: true, completion: nil)
+        self.present(self.imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func tappedCancelButton(_ sender: Any) {
-        //presentingVC 와 self 사이의 VC들을 모두 dismiss
+        // presentingVC 와 self 사이의 VC들을 모두 dismiss
 //        self.presentingViewController?.dismiss(animated: true)
-        //selfVC만 dismiss
+        // selfVC만 dismiss
         self.dismiss(animated: true)
     }
     
     @IBAction func tappedDoneButton(_ sender: Any) {
-        delegate?.editProfile(image: self.profileImageView.image, name: self.nameTextField.text ?? "이름", description: self.descriptionTextField.text ?? "설명")
+        self.delegate?.editProfile(image: self.profileImageView.image, name: self.nameTextField.text ?? "이름", description: self.descriptionTextField.text ?? "설명")
         
         self.dismiss(animated: true)
 //        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
 }
 
-extension EditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    //취소 시
+extension EditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    // 취소 시
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //이미지 선택 시
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+    // 이미지 선택 시
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let image: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.profileImageView.image = image
         }
         self.dismiss(animated: true, completion: nil)

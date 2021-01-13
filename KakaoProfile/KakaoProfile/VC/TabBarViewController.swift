@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-class TabBarViewController: UITabBarController{
-    
+class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC") else { return }
@@ -23,5 +22,4 @@ class TabBarViewController: UITabBarController{
         let vcArr = [profileVC, loginNavigation]
         self.setViewControllers(vcArr, animated: true)
     }
-        
 }

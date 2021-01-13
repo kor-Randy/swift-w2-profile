@@ -8,9 +8,8 @@
 import Foundation
 import UIKit
 
-extension UIViewController{
-    
-    func showToast(vc: UIViewController, msg: String, sec: Double){
+extension UIViewController {
+    func showToast(vc: UIViewController, msg: String, sec: Double) {
         let alert = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
             
         vc.present(alert, animated: true, completion: nil)
@@ -18,7 +17,5 @@ extension UIViewController{
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + sec) {
             alert.dismiss(animated: true, completion: nil)
         }
-            
     }
-    
 }
