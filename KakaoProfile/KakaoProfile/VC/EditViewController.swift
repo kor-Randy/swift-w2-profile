@@ -58,12 +58,10 @@ class EditViewController: UIViewController {
 }
 
 extension EditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    // 취소 시
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    // 이미지 선택 시
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.profileImageView.image = image

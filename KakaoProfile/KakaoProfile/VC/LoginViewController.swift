@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
   
-    private func checkAccount() -> Bool {
+    private func validateAccount() -> Bool {
         guard let id = self.idTextField.text, let pw = self.pwTextField.text else {
             return false
         }
@@ -31,6 +31,8 @@ class LoginViewController: UIViewController {
         
         if let account = userDefault.getAccount() {
             if id == account.0, pw == account.1 {
+                // AlertController를 호출 후에 곧이어 다른 화면 전환을 했을 때
+                // navigation의 push가 호출되지 않는다.
 //                self.showToast(vc: self, msg: "로그인 되었습니다.", sec: 1.0)
                 return true
             } else {
@@ -45,7 +47,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedLoginButton(_ sender: Any) {
-        if self.checkAccount() {
+        if self.validateAccount() {
             guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") else { return }
             
             self.navigationController?.pushViewController(mainVC, animated: true)
