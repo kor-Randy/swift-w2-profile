@@ -47,7 +47,6 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func tappedDoneButton(_ sender: Any) {
-       
         delegate?.editProfile(image: self.profileImageView.image, name: self.nameTextField.text ?? "이름", description: self.descriptionTextField.text ?? "설명")
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
