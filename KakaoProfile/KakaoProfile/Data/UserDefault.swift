@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct UserDefault{
-    
+struct UserDefault {
     static let shared = UserDefault()
-    let sp = UserDefaults.standard
+    let db = UserDefaults.standard
+    private let key_id = "id"
+    private let key_password = "password"
     
-    func createAccount(id: String, pw: String){
-        sp.setValue(id, forKey: "id")
-        sp.setValue(pw, forKey: "pw")
+    func createAccount(id: String, password: String) {
+        db.setValue(id, forKey: key_id)
+        db.setValue(password, forKey: key_password)
     }
     
-    func getAccount() -> (id: String, pw: String)?{
-        if let id = sp.string(forKey: "id"), let pw = sp.string(forKey: "pw"){
-            return (id, pw)
-        }else{
+    func getAccount() -> (id: String, password: String)? {
+        if let id = db.string(forKey: key_id), let password = db.string(forKey: key_password) {
+            return (id, password)
+        } else {
             return nil
         }
     }
-    
 }

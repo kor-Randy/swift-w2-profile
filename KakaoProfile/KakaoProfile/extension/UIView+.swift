@@ -8,12 +8,13 @@
 import Foundation
 import UIKit
 
-extension UIView{
-    func roundView(by n: CGFloat){
-        self.layer.cornerRadius = self.frame.width/n
+extension UIView {
+    func roundView(by n: CGFloat) {
+        self.layer.cornerRadius = self.frame.width / n
         self.clipsToBounds = true
     }
-    func setBorder(thick: CGFloat, color: CGColor){
+
+    func setBorder(thick: CGFloat, color: CGColor) {
         self.layer.borderWidth = thick
         self.layer.borderColor = color
     }
