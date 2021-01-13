@@ -24,14 +24,15 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initImageView()
+        initProfileView()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    private func initProfileView(){
         self.nameTextField.text = nameText
         self.descriptionTextField.text = descriptionText
         self.profileImageView.image = profileImage
     }
+    
     private func initImageView(){
         self.profileImageView.contentMode = .scaleAspectFill
         self.profileImageView.roundView(by: 10)
@@ -43,13 +44,17 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func tappedCancelButton(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true)
+        //presentingVC 와 self 사이의 VC들을 모두 dismiss
+//        self.presentingViewController?.dismiss(animated: true)
+        //selfVC만 dismiss
+        self.dismiss(animated: true)
     }
     
     @IBAction func tappedDoneButton(_ sender: Any) {
-       
         delegate?.editProfile(image: self.profileImageView.image, name: self.nameTextField.text ?? "이름", description: self.descriptionTextField.text ?? "설명")
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        
+        self.dismiss(animated: true)
+//        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
 }

@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
                 self.showToast(vc: self, msg: "아이디와 비밀번호를 확인해주세요.", sec: 1.0)
             }
         }else{
-            userDefault.createAccount(id: id, pw: pw)
+            userDefault.createAccount(id: id, password: pw)
             self.showToast(vc: self, msg: "기입한 정보로 회원가입되었습니다. 다시 로그인해주세요.", sec: 1.0)
         }
         

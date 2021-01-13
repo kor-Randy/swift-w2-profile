@@ -51,11 +51,6 @@ class ProfileViewController: UIViewController {
 //    }
     
     @IBAction func tappedEditButton(_ sender: Any) {
-        self.nameLabel.textColor = .blue
-        self.nameLabel.backgroundColor = .yellow
-        self.nameLabel.alpha = 0.5
-        self.descriptionLabel.text = "크루미션"
-        
         //방법2
 //        performSegue(withIdentifier: "ProfileToLogin", sender: nil)
         
@@ -84,9 +79,11 @@ class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController: ProfileDelegate{
+    
     func editProfile(image: UIImage?, name: String, description: String) {
         self.profileImageView.image = image
         self.nameLabel.text = name
         self.descriptionLabel.text = description
     }
+    
 }
