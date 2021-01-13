@@ -20,4 +20,10 @@ class MainViewController: UIViewController {
         self.navigationController?.title = "뉴스"
         self.webView.load(self.request)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.showToast(vc: self, msg: "로그인되었습니다.", sec: 1.0)
+        
+    }
 }
