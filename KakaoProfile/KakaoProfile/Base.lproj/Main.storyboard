@@ -163,7 +163,7 @@
                     <connections>
                         <outlet property="idTextField" destination="PQE-Qi-RcO" id="m2i-tg-nIM"/>
                         <outlet property="loginButton" destination="F5t-sw-EA6" id="Xlj-iQ-3eP"/>
-                        <outlet property="pwTextField" destination="c4B-eE-DWm" id="yvm-2I-z5S"/>
+                        <outlet property="passwordTextField" destination="c4B-eE-DWm" id="XsB-QD-NYa"/>
                     </connections>
                 </viewController>
             </objects>
