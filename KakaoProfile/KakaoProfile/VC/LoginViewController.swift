@@ -10,7 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var idTextField: UITextField!
-    @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
     private let userDefault = UserDefault.shared
@@ -21,24 +21,25 @@ class LoginViewController: UIViewController {
     }
   
     private func checkAccount() -> Bool{
-        guard let id = self.idTextField.text, let pw = self.pwTextField.text else {
+        guard let id = self.idTextField.text, let password = self.passwordTextField.text else {
             return false
         }
         
-        if id == "" || pw == ""{
+        if id == "" || password == ""{
             self.showToast(vc: self, msg: "아이디와 비밀번호를 입력해주세요.", sec: 1.0)
             return false
         }
         
         if let account = userDefault.getAccount(){
-            if id == account.0 && pw == account.1{
+            if id == account.0 && password == account.1{
+                //AlertController를 호출되고 있는 시간 동안, tappedLoginButton시 다른 VC가 호출될 수 없음
 //                self.showToast(vc: self, msg: "로그인 되었습니다.", sec: 1.0)
                 return true
             }else{
                 self.showToast(vc: self, msg: "아이디와 비밀번호를 확인해주세요.", sec: 1.0)
             }
         }else{
-            userDefault.createAccount(id: id, pw: pw)
+            userDefault.createAccount(id: id, password: password)
             self.showToast(vc: self, msg: "기입한 정보로 회원가입되었습니다. 다시 로그인해주세요.", sec: 1.0)
         }
         

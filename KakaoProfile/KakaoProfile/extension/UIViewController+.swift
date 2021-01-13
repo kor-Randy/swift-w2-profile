@@ -18,7 +18,6 @@ extension UIViewController{
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + sec) {
             alert.dismiss(animated: true, completion: nil)
         }
-            
     }
     
 }

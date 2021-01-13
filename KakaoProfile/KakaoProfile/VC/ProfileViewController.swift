@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
         initImageView()
     }
     
+    //
 //    private func addEvent(){
 //        let editButtonTap = UITapGestureRecognizer(target: self, action: #selector(self.tappedEditButton_Code))
 //        self.editButton.addGestureRecognizer(editButtonTap)

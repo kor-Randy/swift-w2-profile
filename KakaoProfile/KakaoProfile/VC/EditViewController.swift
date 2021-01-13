@@ -24,14 +24,15 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initImageView()
+        initProfileInfo()
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
+    private func initProfileInfo(){
         self.nameTextField.text = nameText
         self.descriptionTextField.text = descriptionText
         self.profileImageView.image = profileImage
     }
+    
     private func initImageView(){
         self.profileImageView.contentMode = .scaleAspectFill
         self.profileImageView.roundView(by: 10)
