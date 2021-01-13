@@ -25,7 +25,7 @@ class EditViewController: UIViewController {
         self.initImageView()
         self.initProfileView()
     }
-
+    
     private func initProfileView() {
         self.nameTextField.text = self.nameText
         self.descriptionTextField.text = self.descriptionText
