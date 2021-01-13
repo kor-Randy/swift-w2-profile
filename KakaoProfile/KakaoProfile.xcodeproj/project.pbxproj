@@ -119,6 +119,7 @@
 				C2E631FA25AD6807005B2733 /* extension */,
 				C2E631CF25AC3AE5005B2733 /* VC */,
 				C2E6319E25AC3A85005B2733 /* SceneDelegate.swift */,
+				C2E6319C25AC3A85005B2733 /* AppDelegate.swift */,
 				C2E631A225AC3A85005B2733 /* Main.storyboard */,
 				C2E631A525AC3A86005B2733 /* Assets.xcassets */,
 				C2E631A725AC3A86005B2733 /* LaunchScreen.storyboard */,
@@ -152,7 +153,6 @@
 				C2E631D525AC415D005B2733 /* TabBarViewController.swift */,
 				C2E631DA25AC4313005B2733 /* ProfileViewController.swift */,
 				C2E631DF25AC4318005B2733 /* EditViewController.swift */,
-				C2E6319C25AC3A85005B2733 /* AppDelegate.swift */,
 				C2E6320925AD6F13005B2733 /* LoginViewController.swift */,
 				C2E6321E25AD7657005B2733 /* MainViewController.swift */,
 			);
