@@ -1,10 +1,6 @@
 
 import UIKit
 
-protocol ProfileDelegate: class {
-    func editProfile(image: UIImage?, name: String, description: String)
-}
-
 class ProfileViewController: UIViewController {
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
