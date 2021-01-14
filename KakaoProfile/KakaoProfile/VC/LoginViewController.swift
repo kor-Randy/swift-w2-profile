@@ -8,11 +8,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    enum ValidateType {
+    enum ValidateType: Error {
         case lack
-        case equal
+        case notExist
         case notEqual
-        case create
     }
     
     @IBOutlet var idTextField: UITextField!
@@ -26,39 +25,35 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
   
-    private func validateAccount() -> ValidateType {
-        guard let id = self.idTextField.text, let password = self.passwordTextField.text else { return .lack }
+    private func validateAccount() throws {
+        guard let id = self.idTextField.text, let password = self.passwordTextField.text else { throw ValidateType.lack }
         
-        if id == "" || password == "" {
-            return .lack
-        }
+        if id == "" || password == "" { throw ValidateType.lack }
         
         if let account = userDefault.getAccount() {
-            if id == account.0, password == account.1 {
-                return .equal
+            if id != account.0 || password != account.1 {
+                throw ValidateType.notEqual
             }
         } else {
             self.userDefault.createAccount(id: id, password: password)
-            return .create
+            
+            throw ValidateType.notExist
         }
-        
-        return .notEqual
     }
     
     @IBAction func tappedLoginButton(_ sender: Any) {
-        switch self.validateAccount() {
-            case .lack:
-                self.showToast(vc: self, msg: "아이디와 비밀번호를 입력해주세요.", sec: 1.0)
-                
-            case .notEqual:
-                self.showToast(vc: self, msg: "아이디와 비밀번호를 확인해주세요.", sec: 1.0)
-                
-            case .create:
-                self.showToast(vc: self, msg: "기입한 정보로 회원가입되었습니다. 다시 로그인해주세요.", sec: 1.0)
-            
-            case .equal:
-                guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") else { return }
-                self.navigationController?.pushViewController(mainVC, animated: true)
+        do {
+            try self.validateAccount()
+            guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") else { return }
+            self.navigationController?.pushViewController(mainVC, animated: true)
+        } catch ValidateType.lack {
+            self.showToast(vc: self, msg: "아이디와 비밀번호를 입력해주세요.", sec: 1.0)
+        } catch ValidateType.notEqual {
+            self.showToast(vc: self, msg: "아이디와 비밀번호를 확인해주세요.", sec: 1.0)
+        } catch ValidateType.notExist {
+            self.showToast(vc: self, msg: "기입한 정보로 회원가입되었습니다. 다시 로그인해주세요.", sec: 1.0)
+        } catch {
+            self.showToast(vc: self, msg: "알 수 없는 에러 발생", sec: 1.0)
         }
     }
 }

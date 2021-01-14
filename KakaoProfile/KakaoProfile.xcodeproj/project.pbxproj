@@ -23,7 +23,7 @@
 		C2E6321525AD7227005B2733 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6321425AD7227005B2733 /* UserDefault.swift */; };
 		C2E6321A25AD74AB005B2733 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6321925AD74AB005B2733 /* UIViewController+.swift */; };
 		C2E6321F25AD7657005B2733 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6321E25AD7657005B2733 /* MainViewController.swift */; };
-		C2E6323425AEB021005B2733 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6323325AEB021005B2733 /* ProfileProtocol.swift */; };
+		C2E6323425AEB021005B2733 /* ProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6323325AEB021005B2733 /* ProfileDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		C2E6321425AD7227005B2733 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		C2E6321925AD74AB005B2733 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		C2E6321E25AD7657005B2733 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		C2E6323325AEB021005B2733 /* ProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
+		C2E6323325AEB021005B2733 /* ProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +182,7 @@
 		C2E6323225AEB00F005B2733 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				C2E6323325AEB021005B2733 /* ProfileProtocol.swift */,
+				C2E6323325AEB021005B2733 /* ProfileDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E6321525AD7227005B2733 /* UserDefault.swift in Sources */,
-				C2E6323425AEB021005B2733 /* ProfileProtocol.swift in Sources */,
+				C2E6323425AEB021005B2733 /* ProfileDelegate.swift in Sources */,
 				C2E6320A25AD6F13005B2733 /* LoginViewController.swift in Sources */,
 				C2E631DB25AC4313005B2733 /* ProfileViewController.swift in Sources */,
 				C2E6319D25AC3A85005B2733 /* AppDelegate.swift in Sources */,

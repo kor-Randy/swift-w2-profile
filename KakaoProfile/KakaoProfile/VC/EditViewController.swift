@@ -43,9 +43,6 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func tappedCancelButton(_ sender: Any) {
-        // presentingVC 와 self 사이의 VC들을 모두 dismiss
-//        self.presentingViewController?.dismiss(animated: true)
-        // selfVC만 dismiss
         self.dismiss(animated: true)
     }
     
@@ -53,7 +50,6 @@ class EditViewController: UIViewController {
         self.delegate?.editProfile(image: self.profileImageView.image, name: self.nameTextField.text ?? "이름", description: self.descriptionTextField.text ?? "설명")
         
         self.dismiss(animated: true)
-//        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
