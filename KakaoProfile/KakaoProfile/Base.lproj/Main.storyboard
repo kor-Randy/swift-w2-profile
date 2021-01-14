@@ -99,6 +99,7 @@
         <!--Login View Controller-->
         <scene sceneID="yN8-i4-sES">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbO-QF-0qH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="qKR-0O-ejR" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6M9-UN-d4F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -127,7 +128,7 @@
                                             <constraint firstAttribute="height" constant="45" id="gaP-Pr-bm3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -162,10 +163,9 @@
                     <connections>
                         <outlet property="idTextField" destination="PQE-Qi-RcO" id="m2i-tg-nIM"/>
                         <outlet property="loginButton" destination="F5t-sw-EA6" id="Xlj-iQ-3eP"/>
-                        <outlet property="pwTextField" destination="c4B-eE-DWm" id="yvm-2I-z5S"/>
+                        <outlet property="passwordTextField" destination="c4B-eE-DWm" id="XsB-QD-NYa"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fbO-QF-0qH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2045.5999999999999" y="871.21439280359823"/>
         </scene>
