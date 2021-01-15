@@ -8,10 +8,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    enum ValidateType: Error {
-        case lack
-        case notExist
-        case notEqual
+    enum ValidateType: String, Error {
+        case lack = "아이디와 비밀번호를 입력해주세요."
+        case notExist = "아이디와 비밀번호를 확인해주세요."
+        case notEqual = "기입한 정보로 회원가입되었습니다. 다시 로그인해주세요."
     }
     
     @IBOutlet var idTextField: UITextField!
@@ -44,14 +44,16 @@ class LoginViewController: UIViewController {
     @IBAction func tappedLoginButton(_ sender: Any) {
         do {
             try self.validateAccount()
+            
             guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") else { return }
-            self.navigationController?.pushViewController(mainVC, animated: true)
-        } catch ValidateType.lack {
-            self.showToast(vc: self, msg: "아이디와 비밀번호를 입력해주세요.", sec: 1.0)
-        } catch ValidateType.notEqual {
-            self.showToast(vc: self, msg: "아이디와 비밀번호를 확인해주세요.", sec: 1.0)
-        } catch ValidateType.notExist {
-            self.showToast(vc: self, msg: "기입한 정보로 회원가입되었습니다. 다시 로그인해주세요.", sec: 1.0)
+            self.pushViewController(from: self, to: mainVC)
+            
+        } catch let error as ValidateType where error == ValidateType.lack{
+            self.showToast(vc: self, msg: error.rawValue, sec: 1.0)
+        } catch let error as ValidateType where error == ValidateType.notEqual {
+            self.showToast(vc: self, msg: error.rawValue, sec: 1.0)
+        } catch let error as ValidateType where error == ValidateType.notExist {
+            self.showToast(vc: self, msg: error.rawValue, sec: 1.0)
         } catch {
             self.showToast(vc: self, msg: "알 수 없는 에러 발생", sec: 1.0)
         }

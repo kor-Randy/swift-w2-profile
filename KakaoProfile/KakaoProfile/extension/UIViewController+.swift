@@ -18,4 +18,8 @@ extension UIViewController {
             alert.dismiss(animated: true, completion: nil)
         }
     }
+    
+    func pushViewController(from: UIViewController, to: UIViewController){
+        from.navigationController?.pushViewController(to, animated: true)
+    }
 }
